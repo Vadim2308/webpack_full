@@ -4,11 +4,15 @@
     "noImplicitAny": true,
     "module": "ESNext",
     "target": "es5",
-    "jsx": "react-jsx", //Нужно для того, чтоб не надо было импортировать реакт, т.к с 17 версии его можно не импортировать
+    "jsx": "react",// Чтоб не надо было импортить реакт в каждом компоненте, можно сделать react-jsx. !НО могут быть траблы при билде babel, когда при открытии страницы он требует импорта реакта. Мб лучше
     "allowJs": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*":["./src/*"]
+    }
   },
   "ts-node": {
     "compilerOptions": {
