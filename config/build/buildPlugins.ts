@@ -19,7 +19,8 @@ export function buildPlugins({ mode,paths,analyzer,platform}:BuildOptions):Confi
         }),
         new HtmlWebpackPlugin({
             template: paths.html,
-            favicon:path.resolve(paths.public,'favicon.ico')
+            favicon:path.resolve(paths.public,'favicon.ico'),
+            publicPath:'/' // В микрофронтах могут быть проблемы при вставке URL-а в адресную строку. Необходимо чтоб при любом урле запрашивался один и тот же HTML файл
         }),
         new MiniCssExtractPlugin({
             filename: 'css/[name].[contenthash:8].css',
