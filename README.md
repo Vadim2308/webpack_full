@@ -1,0 +1,22 @@
+# Webpack
+
+-  Entry и output. Кеширование файлов. Динамический filename.
+-  Переменные окружения (env variables).
+-  HtmlWebpackPlugin.
+-  ProgressPlugin
+-  Loaders, TypeScript
+-  Dev Server. Watch Режим. Source maps
+-  React. JSX
+-  css и scss
+-  MiniCssExtractPlugin
+-  Css modules
+-  Роутинг. Ленивые чанки. Code splitting. Размер бандла. Bundle analyzer. History Api Fallback.
+-  Алиасы. Резолвинг модулей. Абсолютные импорты
+-  Ассеты. Работа с картинками, шрифтами, иконками.
+-  Глобальные переменные сборки.
+-  Проверка типов в отдельном процессе. ForkTsCheckerPlugin
+-  Hot module replacement (hmr)
+-  Favicon. CopyPlugin
+-  Babel. Babel-loader Cвой babel плагин
+-  Webpack module federation
+-  Shared код из packages
