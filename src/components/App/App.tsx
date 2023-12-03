@@ -1,4 +1,4 @@
-import React, {FC, useState} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import classes from './App.module.scss'
 import {Link, Outlet} from "react-router-dom";
 import AvatarPng from '@/assets/avatar.png'
@@ -7,6 +7,9 @@ import AvatarSVG from '@/assets/app-image.svg'
 
 export const App: FC = () => {
     const [count,setCount] = useState(4)
+    useEffect(() => {
+        fetch('/api/todos',).then(res=>res.json()).then(console.log)
+    }, []);
     return (
         <div data-testid='App' className={classes.w}>
             <h1 data-testid='Platform'>Platform: {__PLATFORM__}</h1>
