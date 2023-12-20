@@ -8,6 +8,15 @@ import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 import path from "path";
 import CopyPlugin from "copy-webpack-plugin";
 
+/**
+ * Для того чтобы использовать переменные из файла .env в конфигурации Webpack 5, необходимо установить dotenv пакет.
+ * - npm install dotenv --save-dev
+ * - './.env' with the path of your .env file
+ *   require('dotenv').config({ path: './.env' });
+ * - Использование:
+ *   title: process.env.MY_APP_TITLE // пример использования другой переменной из .env
+ */
+
 export function buildPlugins({ mode,paths,analyzer,platform}:BuildOptions):Configuration['plugins'] {
     const isDev = mode === 'development'
     const isProd = mode === 'production'

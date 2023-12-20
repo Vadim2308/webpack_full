@@ -1,6 +1,10 @@
 import type { Configuration as DevServerConfiguration } from "webpack-dev-server";
 import {BuildOptions} from "./types/types";
 
+/**
+ * В некоторых конфигах есть ключ, write вроде. Он пишет все изменения в файловую систему в деве. НО это очень дорого, и не стоит так делать. Девсервер хранит всю сборку у себя, и не насилует FS, ускоряется разработка
+ * @param options
+ */
 export function buildDevServer(options:BuildOptions):DevServerConfiguration {
     return {
         https: true,
